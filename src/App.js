@@ -1,15 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './components/Contact.css';
-import Contact from './components/Contact.js';
+import ContactList from './components/ContactList';
+import data from './data';
 
-function App() {
-  return (
-    <div>
-      <Contact />
-      
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <div>
+        <ContactList {...data} />
+      </div>
+    );
+  }
 }
 
 export default App;

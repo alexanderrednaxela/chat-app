@@ -1,14 +1,17 @@
 import React from 'react';
+import './Contact.css'
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <div className="Contact">
-            <div className="avatar"></div>
+            <img className="avatar" src={props.avatar}/>
             <div className="contact-info">
-                <div className="name">Kim Simpson</div>
+                <div className="name">{props.name}</div>
                 <div className="status">
-                    <div className="status-online"></div>
-                    <div className="status-text"></div>            
+                    <div className={props.online ? 'status-online' : 'status-offline'}></div>
+                    <div className="status-text">
+                        <div className={props.online ? 'status-online::after' : 'status-offline::after'}></div>    
+                    </div>            
                 </div>
             </div>    
         </div>
