@@ -19,7 +19,7 @@ const Contact = (props) => {
     )
 }
 
-PersonGreeter.propTypes = {
+Contact.propTypes = {
     avatar: PropTypes.string.isRequired, 
     name: PropTypes.string.isRequired,
     online: PropTypes.bool.isRequired,
