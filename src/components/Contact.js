@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css'
+import PropTypes from 'prop-types';
 
 const Contact = (props) => {
     return (
@@ -17,6 +18,12 @@ const Contact = (props) => {
         </div>
     )
 }
+
+PersonGreeter.propTypes = {
+    avatar: PropTypes.string.isRequired, 
+    name: PropTypes.string.isRequired,
+    online: PropTypes.bool.isRequired,
+};
 
 
 export default Contact;
